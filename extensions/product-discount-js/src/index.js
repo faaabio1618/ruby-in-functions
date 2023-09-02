@@ -34,7 +34,7 @@ export default /**
   }
   let targets = [];
   let discountValue = {percentage: {value: 0}};
-  let message = "";
+  let discount_message = "Applying ruby discounts";
   // console.log(JSON.stringify(input));
   const Input = {
     cart: {
@@ -45,14 +45,14 @@ export default /**
             gift_card: (line_item.merchandise.__typename !== "ProductVariant")
           }
         },
-        change_line_price: (new_price, {message_}) => {
+        change_line_price: (new_price, {message}) => {
           if (line_item.merchandise.__typename === "ProductVariant") {
+            discount_message = message;
             targets.push({
               productVariant: {
                 id: line_item.merchandise.id
               }
             })
-            message = message_;
           }
           discountValue = {
             percentage: {
@@ -71,7 +71,7 @@ export default /**
   }
 
   Money.prototype.valueOf = function () {
-    return this.cents/100;
+    return this.cents / 100;
   };
 
   eval(configuration.code);
@@ -86,9 +86,9 @@ export default /**
       {
         targets,
         value: discountValue,
-        message: message
+        message: discount_message
       }
     ],
-    discountApplicationStrategy: DiscountApplicationStrategy.First
+    discountApplicationStrategy: DiscountApplicationStrategy.Maximum
   };
 };
