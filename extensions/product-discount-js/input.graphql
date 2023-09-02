@@ -1,0 +1,35 @@
+query Input {
+  cart {
+    cost {
+      subtotalAmount {
+        amount
+      }
+
+    }
+    lines {
+      cost {
+        totalAmount {
+          amount
+        }
+      }
+      quantity
+
+      merchandise {
+
+        __typename
+        ... on ProductVariant {
+
+          id
+        }
+      }
+    }
+  }
+  discountNode {
+    metafield(
+      namespace: "$app:ruby-in-functions"
+      key: "function-configuration"
+    ) {
+      value
+    }
+  }
+}
