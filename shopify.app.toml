@@ -2,7 +2,7 @@
 
 name = "ruby-in-functions"
 client_id = "1adc07879e19f5664b48920283c68c0f"
-application_url = "https://assisted-experiment-organic-classics.trycloudflare.com"
+application_url = "https://orbit-turkish-knowledgestorm-wants.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products,write_discounts"
 
 [auth]
 redirect_urls = [
-  "https://assisted-experiment-organic-classics.trycloudflare.com/auth/callback",
-  "https://assisted-experiment-organic-classics.trycloudflare.com/auth/shopify/callback",
-  "https://assisted-experiment-organic-classics.trycloudflare.com/api/auth/callback"
+  "https://orbit-turkish-knowledgestorm-wants.trycloudflare.com/auth/callback",
+  "https://orbit-turkish-knowledgestorm-wants.trycloudflare.com/auth/shopify/callback",
+  "https://orbit-turkish-knowledgestorm-wants.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

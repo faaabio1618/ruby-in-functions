@@ -8,6 +8,8 @@ node_modules
 /prisma/dev.sqlite
 /prisma/dev.sqlite-journal
 database.sqlite
+/3_2-wasm32-unknown-wasi-full
+*wasm
 
 .env
 package-lock.json

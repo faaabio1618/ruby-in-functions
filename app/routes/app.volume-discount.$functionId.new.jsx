@@ -134,7 +134,7 @@ export default function VolumeNew() {
   return (
     // Render a discount form using Polaris components and the discount app components
     <Page
-      title="Create your discount"
+      title="Create your script discount"
       backAction={{
         content: "Discounts",
         onAction: () => onBreadcrumbAction(redirect, true),
@@ -145,7 +145,7 @@ export default function VolumeNew() {
         <Layout.Section>
           <Form method="post">
             <VerticalStack align="space-around" gap="2">
-              <LegacyCard title={"Script"}>
+              <LegacyCard title={"Ruby Script"}>
                 <LegacyCard.Section>
                   <Editor
                     value={script.value}
